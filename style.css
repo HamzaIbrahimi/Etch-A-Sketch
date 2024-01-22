@@ -4,10 +4,6 @@
     padding: 0;
 }
 
-body {
-    background-image: url(images/visax-bI_QFUZc5S4-unsplash.jpg);
-    background-size: cover;
-}
 
 .main_header {
     display: flex;
@@ -18,6 +14,43 @@ body {
     font-weight: 900;
     font-size: 40px;
     font-family:'Rubik Doodle Shadow', system-ui,'sans-serif';
-    margin-top: 5px;
+    margin-top: 5px;    
+}
+
+.main_container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
     
 }
+
+#the_grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    border: 30px solid rosybrown;
+    
+}
+
+
+
+.grid_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+}
+
+button {
+    background: #3882F6;
+    color: #fff;
+    padding: 20px 10px;
+    border-radius: 100px ;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    border: 1px solid black;
+}
+
