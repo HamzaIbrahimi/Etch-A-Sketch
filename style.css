@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(images/visax-bI_QFUZc5S4-unsplash.jpg);
+    background-size: cover;
+}
+
+.main_header {
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 10px;
+    color: rgb(213, 16, 16);
+    font-weight: 900;
+    font-size: 40px;
+    font-family:'Rubik Doodle Shadow', system-ui,'sans-serif';
+    margin-top: 5px;
+    
+}
