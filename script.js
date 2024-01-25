@@ -16,7 +16,7 @@ function randomColor () { //function the returns a random hex color
   for(let i=0; i<6; i++) {
    hex += colors[Math.floor(Math.random()*colors.length)];
   }
-  return hex
+  return hex;
  }
  
 function createGrid(size) { //Function to create a grid between 16x16 - 40x40
@@ -86,23 +86,3 @@ clear.addEventListener('click', () => {
     cell.style.background = '';
   })
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
