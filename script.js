@@ -80,7 +80,7 @@ function changeGridSize() { //Function & EventListener to change grid size
 changeGrid.addEventListener("click", changeGridSize);
 
 
-//clearing the sketch area
+//clearing the sketch area testing event delegation
 clear.addEventListener('click', () => {
   cellsArray.forEach((cell) => {
     cell.style.background = '';
