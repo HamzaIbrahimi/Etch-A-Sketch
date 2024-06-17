@@ -14,7 +14,11 @@
     <header class="main_header">
         <h1>ETCH - A - SKETCH</h1>
         <div class="buttons">
-            <button id="change_grid">Change Grid Number</button>
+            <button id="change_grid">Change Grid Size</button>
+            <div id="input-range" style="display: flex; gap: 12px;">
+                <input type="range" id="range" name="size" min="16" max="100" step="1" value="20">
+                <label for="range"></label>
+            </div>
             <button id="draw_black">Black Mode</button>
             <button id="rainbow">Colorful</button>
             <button id="erase"> Erase</button>
