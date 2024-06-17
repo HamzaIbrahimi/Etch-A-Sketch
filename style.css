@@ -38,6 +38,11 @@ body {
     margin: 20px;
 }
 
+#grid > * {
+    outline: 1px solid black;
+    flex: auto;
+}
+
 .buttons {
     display: flex;
     flex-direction: column;
