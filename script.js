@@ -1,15 +1,16 @@
 //Create global variables for DOM manipulation
-
 const grid = document.querySelector("#grid");
-const changeGrid = document.querySelector("#change_grid");
 const black = document.querySelector("#draw_black");
 const erase = document.querySelector("#erase");
 const clear = document.querySelector("#clear");
 const rainbow = document.querySelector("#rainbow");
+const range = document.querySelector('#range');
+let label = document.querySelector('label');
 let defaultGrid = 16;
 let cellsArray = []; //Used to manipulate dom through pushing grid cells to it
 let gridWidth = grid.clientWidth;
 let gridHeight = grid.clientHeight;
+label.textContent = `Size = ${range.value}`
 
 function randomColor() {
   //function the returns a random hex color
@@ -41,24 +42,19 @@ function createGrid(size) {
   }
 }
 
-function mainGrid() {
-  //main 16x16 default display
-  createGrid(defaultGrid);
-}
-mainGrid();
+createGrid(defaultGrid)
 
-function changeGridSize() {
-  //Function & EventListener to change grid size
-  do {
-    size = Math.floor(
-      parseInt(prompt("Choose Grid Size: Whole Number between 16 & 100"))
-    );
-  } while (!Number.isInteger(size));
-  grid.textContent = "";
-  createGrid(size);
-}
+//remove function to change grid size and add input range with event listener to update grid based on range input
+range.addEventListener('change', (e) => {
+  cellsArray.length = 0;
+  while(grid.lastElementChild) {
+    grid.removeChild(grid.lastElementChild)
+  }
+  let val = e.target.value;
+  label.textContent = `Size = ${val}`
+  createGrid(+val);
+})
 
-changeGrid.addEventListener("click", changeGridSize);
 
 //Function to change background color of each cell on mouse over
 function changeBackgroundToBlack() {
@@ -68,8 +64,6 @@ function changeBackgroundToBlack() {
     });
   }
 }
-
-window.addEventListener('DOMContentLoaded', changeBackgroundToBlack)
 
 //function to reverse background color changes to none (acting as an erase)
 function eraseGrid() {
@@ -98,4 +92,3 @@ clear.addEventListener("click", () => {
     cell.style.background = "";
   });
 });
-
